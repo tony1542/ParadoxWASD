@@ -1,3 +1,11 @@
+; Coordinate variables
+unitRow1X := 881
+unitRow2X := 971
+unitRow3X := 1051
+unitRow4X := 1121
+unitRow5X := 1215
+unitRow1Y := 700
+
 SendMode Input
 
 ; Allow WASD movement for EU4, HOI4, Crusader Kings 2, and Victoria 2
@@ -101,7 +109,7 @@ select_mobile_battalion()
 select_cavalry_battalion()
 {
     Sleep 100
-    MouseClick, left, 1064, 532
+    MouseClick, left, 875, 627
     select_cavalry()
 
     return
@@ -119,7 +127,7 @@ select_motorized_infantry()
 select_cavalry()
 {
     Sleep 100
-    MouseClick, left, 1064, 612
+    MouseClick, left, 1114, 570
     Sleep 100
 
     return
@@ -220,11 +228,12 @@ add_infantry(x, y, number)
 ; Division Designer; 10/0 infantry
 #i::
 new_division_template_create()
+
 Sleep 500
 
-add_infantry(881, 700, 4)
-add_infantry(951, 700, 3)
-add_infantry(1031, 700, 3)
+add_infantry(unitRow1X, unitRow1Y, 4)
+add_infantry(unitRow2X, unitRow1Y, 3)
+add_infantry(unitRow3X, unitRow1Y, 3)
 
 return
 
@@ -233,8 +242,8 @@ return
 new_division_template_create()
 Sleep 500
 
-add_infantry(881, 701, 3)
-add_infantry(859, 692, 2)
+add_infantry(unitRow1X, unitRow1Y, 3)
+add_infantry(unitRow2X, unitRow1Y, 2)
 
 return
 
@@ -243,9 +252,9 @@ return
 new_division_template_create()
 Sleep 500
 
-add_medium_tank(881, 700, 4)
-add_medium_tank(951, 700, 3)
-add_motorized_infantry(1031, 700, 3)
+add_medium_tank(unitRow1X, unitRow1Y, 4)
+add_medium_tank(unitRow2X, unitRow1Y, 3)
+add_motorized_infantry(unitRow3X, unitRow1Y, 3)
 
 return
 
@@ -254,10 +263,10 @@ return
 new_division_template_create()
 Sleep 500
 
-add_medium_tank(881, 700, 5)
-add_medium_tank(951, 700, 5)
-add_medium_tank(1031, 700, 5)
-add_motorized_infantry(1101, 700, 5)
+add_medium_tank(unitRow1X, unitRow1Y, 5)
+add_medium_tank(unitRow2X, unitRow1Y, 5)
+add_medium_tank(unitRow3X, unitRow1Y, 5)
+add_motorized_infantry(unitRow4X, unitRow1Y, 5)
 
 return
 
@@ -266,11 +275,11 @@ return
 new_division_template_create()
 Sleep 500
 
-add_cavalry(753, 692, 5)
-add_cavalry(859, 692, 5)
-add_cavalry(965, 692, 5)
-add_cavalry(1072, 692, 5)
-add_cavalry(1178, 692, 5)
+add_cavalry(unitRow1X, unitRow1Y, 4)
+add_cavalry(unitRow2X, unitRow1Y, 4)
+add_cavalry(unitRow3X, unitRow1Y, 4)
+add_cavalry(unitRow4X, unitRow1Y, 4)
+add_cavalry(unitRow5X, unitRow1Y, 4)
 
 return
 
@@ -295,4 +304,3 @@ Loop, 71 {
 }
 
 return
-
