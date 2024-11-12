@@ -50,175 +50,171 @@ new_division_template_create()
     Sleep 500
     MouseClick, left, 1050, 550
 
-	return
+    return
 }
 
 select_infantry_battalion()
 {
-	Sleep 100
-    MouseClick, left, 872, 711  ; Adjusted from (560, 390)
-	select_infantry()
+    Sleep 100
+    MouseClick, left, 872, 711
+    select_infantry()
 
-	return
+    return
 }
 
 select_infantry()
 {
-	Sleep 100
-    MouseClick, left, 876, 557  ; Adjusted from (560, 460)
-	Sleep 100
+    Sleep 100
+    MouseClick, left, 876, 557
+    Sleep 100
 
-	return
+    return
 }
 
 select_medium_tank_battalion()
 {
-	Sleep 100
-    MouseClick, left, 744, 612  ; Adjusted from (560, 460)
-	select_medium_tank()
+    Sleep 100
+    MouseClick, left, 744, 612
+    select_medium_tank()
 
-	return
+    return
 }
 
 select_medium_tank()
 {
-	Sleep 100
-    MouseClick, left, 744, 612  ; Adjusted from (560, 460)
-	Sleep 100
+    Sleep 100
+    MouseClick, left, 744, 612
+    Sleep 100
 
-	return
+    return
 }
 
 select_mobile_battalion()
 {
-	Sleep 100
-    MouseClick, left, 1064, 532  ; Adjusted from (800, 400)
-	select_motorized_infantry()
+    Sleep 100
+    MouseClick, left, 1064, 532
+    select_motorized_infantry()
 
-	return
+    return
 }
 
 select_cavalry_battalion()
 {
-	Sleep 100
-    MouseClick, left, 1064, 532  ; Adjusted from (800, 400)
-	select_cavalry()
+    Sleep 100
+    MouseClick, left, 1064, 532
+    select_cavalry()
 
-	return
+    return
 }
 
 select_motorized_infantry()
 {
-	Sleep 100
-    MouseClick, left, 744, 704  ; Adjusted from (560, 530)
-	Sleep 100
+    Sleep 100
+    MouseClick, left, 744, 704
+    Sleep 100
 
-	return
+    return
 }
 
 select_cavalry()
 {
-	Sleep 100
-    MouseClick, left, 1064, 612  ; Adjusted from (800, 460)
-	Sleep 100
+    Sleep 100
+    MouseClick, left, 1064, 612
+    Sleep 100
 
-	return
+    return
 }
 
 add_medium_tank(x, y, number)
 {
-	Count := 0
+    Count := 0
 
-	while (Count < number)
-	{
-		MouseClick, left, x, y
+    while (Count < number)
+    {
+        MouseClick, left, x, y
 
-		if (Count < 1)
-		{
-			select_medium_tank_battalion()
-		} else
-		{
-			select_medium_tank()
-		}
+        if (Count < 1)
+        {
+            select_medium_tank_battalion()
+        } else
+        {
+            select_medium_tank()
+        }
 
+        Count += 1
+        y += 66
+    }
 
-		Count += 1
-		y += 66  ; Adjusted from (50)
-	}
-
-	return
+    return
 }
 
 add_motorized_infantry(x, y, number)
 {
-	Count := 0
+    Count := 0
 
-	while (Count < number)
-	{
-		MouseClick, left, x, y
+    while (Count < number)
+    {
+        MouseClick, left, x, y
 
-		if (Count < 1)
-		{
-			select_mobile_battalion()
-		} else
-		{
-			select_motorized_infantry()
-		}
+        if (Count < 1)
+        {
+            select_mobile_battalion()
+        } else
+        {
+            select_motorized_infantry()
+        }
 
+        Count += 1
+        y += 66
+    }
 
-		Count += 1
-		y += 66  ; Adjusted from (50)
-	}
-
-	return
+    return
 }
 
 add_cavalry(x, y, number)
 {
-	Count := 0
+    Count := 0
 
-	while (Count < number)
-	{
-		MouseClick, left, x, y
+    while (Count < number)
+    {
+        MouseClick, left, x, y
 
-		if (Count < 1)
-		{
-			select_cavalry_battalion()
-		} else
-		{
-			select_cavalry()
-		}
+        if (Count < 1)
+        {
+            select_cavalry_battalion()
+        } else
+        {
+            select_cavalry()
+        }
 
+        Count += 1
+        y += 66
+    }
 
-		Count += 1
-		y += 66  ; Adjusted from (50)
-	}
-
-	return
+    return
 }
 
 add_infantry(x, y, number)
 {
-	Count := 0
+    Count := 0
 
-	while (Count < number)
-	{
-		MouseClick, left, x, y
+    while (Count < number)
+    {
+        MouseClick, left, x, y
 
-		if (Count < 1)
-		{
-			select_infantry_battalion()
-		} else
-		{
-			select_infantry()
-		}
+        if (Count < 1)
+        {
+            select_infantry_battalion()
+        } else
+        {
+            select_infantry()
+        }
 
+        Count += 1
+        y += 50
+    }
 
-		Count += 1
-		y += 50  ; Adjusted from (50)
-	}
-
-	return
+    return
 }
 
 ; Division Designer; 10/0 infantry
@@ -226,9 +222,9 @@ add_infantry(x, y, number)
 new_division_template_create()
 Sleep 500
 
-add_infantry(881, 700, 4)  ; Adjusted from (566, 520)
-add_infantry(951, 700, 3)  ; Adjusted from (646, 520)
-add_infantry(1031, 700, 3)  ; Adjusted from (706, 520)
+add_infantry(881, 700, 4)
+add_infantry(951, 700, 3)
+add_infantry(1031, 700, 3)
 
 return
 
@@ -237,8 +233,8 @@ return
 new_division_template_create()
 Sleep 500
 
-add_infantry(881, 701, 3)  ; Adjusted from (566, 520)
-add_infantry(859, 692, 2)  ; Adjusted from (646, 520)
+add_infantry(881, 701, 3)
+add_infantry(859, 692, 2)
 
 return
 
@@ -247,10 +243,10 @@ return
 new_division_template_create()
 Sleep 500
 
-add_medium_tank(753, 692, 5)  ; Adjusted from (566, 520)
-add_medium_tank(859, 692, 5)  ; Adjusted from (646, 520)
-add_medium_tank(965, 692, 5)  ; Adjusted from (726, 520)
-add_motorized_infantry(1072, 692, 5)  ; Adjusted from (806, 520)
+add_medium_tank(753, 692, 5)
+add_medium_tank(859, 692, 5)
+add_medium_tank(965, 692, 5)
+add_motorized_infantry(1072, 692, 5)
 
 return
 
@@ -259,11 +255,11 @@ return
 new_division_template_create()
 Sleep 500
 
-add_cavalry(753, 692, 5)  ; Adjusted from (566, 520)
-add_cavalry(859, 692, 5)  ; Adjusted from (646, 520)
-add_cavalry(965, 692, 5)  ; Adjusted from (726, 520)
-add_cavalry(1072, 692, 5)  ; Adjusted from (806, 520)
-add_cavalry(1178, 692, 5)  ; Adjusted from (886, 520)
+add_cavalry(753, 692, 5)
+add_cavalry(859, 692, 5)
+add_cavalry(965, 692, 5)
+add_cavalry(1072, 692, 5)
+add_cavalry(1178, 692, 5)
 
 return
 
@@ -272,8 +268,8 @@ return
 Send {Shift down}
 
 Loop, 10 {
-	Click
-	Sleep, 10
+    Click
+    Sleep, 10
 }
 
 Sendinput, {RButton up}{Shift up}
@@ -285,8 +281,8 @@ return
 Send {LControl down}
 
 Loop, 5 {
-	Click
-	Sleep, 10
+    Click
+    Sleep, 10
 }
 
 Sendinput, {RButton up}{Shift up}
