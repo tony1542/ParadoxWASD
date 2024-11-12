@@ -275,7 +275,7 @@ add_cavalry(1178, 692, 5)
 return
 
 ; Shift+click 10 times for 1k planes
-#n::
+#j::
 Send {Shift down}
 
 Loop, 10 {
@@ -287,15 +287,12 @@ Sendinput, {RButton up}{Shift up}
 
 return
 
-; Ctrl+click 5 times for 50 planes
-#b::
-Send {LControl down}
-
-Loop, 5 {
+; 72 units worth (including first one from starting a line)
+#k::
+Loop, 71 {
     Click
     Sleep, 10
 }
 
-Sendinput, {RButton up}{Shift up}
-
 return
+
