@@ -2,7 +2,7 @@
 This is a way to play older Paradox titles with WASD movement rather than arrow keys for camera movement. It also includes some HOI4-specific macros for division designers.
 
 # How do I use it?
-Ensure you have [AutoHotKey installed](https://github.com/AutoHotkey/AutoHotkey/releases) and simply run the WASD_Paradox.ahk file from this repository.
+Ensure you have [AutoHotKey installed](https://github.com/AutoHotkey/AutoHotkey/releases) and simply run either the WASD_Paradox1080p.ahk or WASD_Paradox1440p.ahk file from this repository. If you want to pause the script, you can hit your "End" key and you'll hear an audio cue.
 
 # Notes
 If you aren't on a Windows machine, you should update the following block
