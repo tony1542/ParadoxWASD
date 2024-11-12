@@ -74,7 +74,7 @@ select_infantry()
 select_medium_tank_battalion()
 {
     Sleep 100
-    MouseClick, left, 744, 612
+	MouseClick, left, 1133, 642
     select_medium_tank()
 
     return
@@ -92,7 +92,7 @@ select_medium_tank()
 select_mobile_battalion()
 {
     Sleep 100
-    MouseClick, left, 1064, 532
+    MouseClick, left, 875, 627
     select_motorized_infantry()
 
     return
@@ -110,7 +110,7 @@ select_cavalry_battalion()
 select_motorized_infantry()
 {
     Sleep 100
-    MouseClick, left, 744, 704
+    MouseClick, left, 862, 636
     Sleep 100
 
     return
@@ -142,7 +142,7 @@ add_medium_tank(x, y, number)
         }
 
         Count += 1
-        y += 66
+        y += 50
     }
 
     return
@@ -165,7 +165,7 @@ add_motorized_infantry(x, y, number)
         }
 
         Count += 1
-        y += 66
+        y += 50
     }
 
     return
@@ -188,7 +188,7 @@ add_cavalry(x, y, number)
         }
 
         Count += 1
-        y += 66
+        y += 50
     }
 
     return
@@ -238,15 +238,26 @@ add_infantry(859, 692, 2)
 
 return
 
+; Division Designer; 20W medium tanks
+#v::
+new_division_template_create()
+Sleep 500
+
+add_medium_tank(881, 700, 4)
+add_medium_tank(951, 700, 3)
+add_motorized_infantry(1031, 700, 3)
+
+return
+
 ; Division Designer; 40W medium tanks
 #m::
 new_division_template_create()
 Sleep 500
 
-add_medium_tank(753, 692, 5)
-add_medium_tank(859, 692, 5)
-add_medium_tank(965, 692, 5)
-add_motorized_infantry(1072, 692, 5)
+add_medium_tank(881, 700, 5)
+add_medium_tank(951, 700, 5)
+add_medium_tank(1031, 700, 5)
+add_motorized_infantry(1101, 700, 5)
 
 return
 
