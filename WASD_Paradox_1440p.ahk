@@ -1,11 +1,3 @@
-; Coordinate variables
-unitRow1X := 881
-unitRow2X := 971
-unitRow3X := 1051
-unitRow4X := 1121
-unitRow5X := 1215
-unitRow1Y := 700
-
 SendMode Input
 
 ; Allow WASD movement for EU4, HOI4, Crusader Kings 2, and Victoria 2
@@ -15,6 +7,14 @@ GroupAdd WASD, ahk_exe CK2game.exe
 GroupAdd WASD, ahk_exe v2game.exe
 
 #IfWinActive ahk_group WASD
+
+; Coordinate variables
+unitRow1X := 881
+unitRow2X := 971
+unitRow3X := 1051
+unitRow4X := 1121
+unitRow5X := 1215
+unitRow1Y := 700
 
 ; Allow the 'c' key to translate as the 'enter' key like in EU4
 c::Send {Enter}
